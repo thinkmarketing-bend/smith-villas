@@ -38,60 +38,81 @@
     <main>
       <section class="hero" aria-labelledby="contact-title">
         <div>
-          <p class="eyebrow">Smith Villas</p>
+          <p class="eyebrow eyebrow-with-mark">
+            <img
+              class="title-mark title-mark--hero"
+              src="assets/images/sv-logo-clear.png"
+              alt=""
+              aria-hidden="true"
+            />
+            Smith Villas
+          </p>
           <h1 id="contact-title">Inquire About Availability</h1>
           <p>Share your preferred dates and villa interests for a private response.</p>
         </div>
         <div>
-          <div class="hero-media" aria-hidden="true"></div>
+          <div class="hero-slider" aria-label="Villa imagery">
+            <img class="hero-image" src="assets/images/sea-esta20.jpg" alt="Sea Esta Villa" />
+          </div>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="inquiry-title">
-        <h2 id="inquiry-title">Inquiry Form</h2>
-        <p>Structured for future WhatsApp coordination and tailored follow-up.</p>
-        <form class="callout" action="#" method="post">
-          <div class="form-grid">
-            <div>
-              <label for="first-name">First name</label>
-              <input id="first-name" name="first-name" type="text" autocomplete="given-name" />
-            </div>
-            <div>
-              <label for="last-name">Last name</label>
-              <input id="last-name" name="last-name" type="text" autocomplete="family-name" />
-            </div>
-            <div>
-              <label for="email">Email address</label>
-              <input id="email" name="email" type="email" autocomplete="email" />
-            </div>
-            <div>
-              <label for="phone">Phone number</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" />
-            </div>
-            <div>
-              <label for="villa">Villa preference</label>
-              <select id="villa" name="villa">
-                <option value="">Select a villa</option>
-                <option value="sand-pebbles">Sand Pebbles Villa</option>
-                <option value="sea-esta">Sea Esta Villa</option>
-              </select>
-            </div>
-            <div>
-              <label for="dates">Preferred dates</label>
-              <input id="dates" name="dates" type="text" placeholder="Arrival - Departure" />
-            </div>
-          </div>
-          <div>
-            <label for="notes">Additional details</label>
-            <textarea id="notes" name="notes" placeholder="Guest count, requests, or services"></textarea>
-          </div>
-          <button class="button" type="submit">Submit Inquiry</button>
-        </form>
+      <section class="section" aria-labelledby="cta-title">
+        <div class="title-with-mark">
+          <img
+            class="title-mark"
+            src="assets/images/sv-logo-clear.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <h2 id="cta-title">Private Communication</h2>
+        </div>
+        <p>We are preparing WhatsApp for Business for direct coordination and fast replies.</p>
+        <div class="callout">
+          <h3>Message Smith Villas</h3>
+          <p>Once the WhatsApp link is live, you will be able to reach our team here.</p>
+          <button class="button is-disabled" type="button" aria-disabled="true">
+            WhatsApp coming soon
+          </button>
+        </div>
       </section>
 
-      <section class="section" aria-labelledby="cta-title">
-        <h2 id="cta-title">Private Communication</h2>
-        <p>WhatsApp for Business will be enabled for direct coordination.</p>
+      <section class="section" aria-labelledby="availability-title">
+        <div class="title-with-mark">
+          <img
+            class="title-mark"
+            src="assets/images/sv-logo-clear.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <h2 id="availability-title">Availability</h2>
+        </div>
+        <div class="detail-grid">
+          <div class="callout">
+            <div class="eyebrow-with-mark">
+              <img
+                class="title-mark"
+                src="assets/images/sv-logo-clear.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span>Sand Pebbles Calendar</span>
+            </div>
+            <p>Calendar integration coming soon.</p>
+          </div>
+          <div class="callout">
+            <div class="eyebrow-with-mark">
+              <img
+                class="title-mark"
+                src="assets/images/sv-logo-clear.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <span>Sea Esta Calendar</span>
+            </div>
+            <p>Calendar integration coming soon.</p>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -101,7 +122,7 @@
           <img src="assets/images/sv-logo-clear.png" alt="Smith Villas" />
         </span>
         <span>Private Villa Collection</span>
-        <span>Contact for Availability</span>
+        <button class="button is-disabled" type="button" aria-disabled="true">Message us</button>
       </div>
     </footer>
   </body>
