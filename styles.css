@@ -211,7 +211,7 @@ main {
 }
 
 .villa-details {
-  padding: 60px 6vw 90px;
+  padding: 60px 6vw 40px;
   background: #ffffff;
 }
 
@@ -385,6 +385,218 @@ main {
 .calendar-placeholder__inner p {
   margin: 0;
   color: var(--color-muted);
+}
+
+.reviews-carousel {
+  padding: 32px 6vw 90px;
+  background: #ffffff;
+}
+
+.reviews-carousel__header {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.reviews-carousel__header h2 {
+  margin: 0 0 12px;
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.reviews-carousel__header p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.carousel {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 6px 10px 18px;
+}
+
+.review-card {
+  flex: 0 0 min(360px, 82vw);
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 22px;
+  box-shadow: var(--shadow-soft);
+  scroll-snap-align: start;
+}
+
+.review-card--compact {
+  cursor: pointer;
+}
+
+.review-card p {
+  margin: 0 0 16px;
+  color: var(--color-text);
+  font-size: 1.05rem;
+}
+
+.review-card--compact p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.review-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 16px;
+}
+
+.review-rating__score {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+.review-rating__label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.review-highlights {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.review-card--compact .review-highlights {
+  -webkit-line-clamp: 2;
+}
+
+.review-author {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.review-meta {
+  display: block;
+  margin-top: 8px;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+.review-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 14, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+  padding: 32px 16px;
+}
+
+.review-lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.review-lightbox__frame {
+  width: min(92vw, 720px);
+  max-height: 80vh;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(12, 16, 20, 0.35);
+  overflow: hidden;
+}
+
+.review-lightbox__content {
+  padding: 28px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.review-lightbox__content p,
+.review-lightbox__content .review-highlights {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+.review-lightbox__close,
+.review-lightbox__nav {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(30, 35, 40, 0.15);
+  color: var(--color-text);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.review-lightbox__close {
+  top: 20px;
+  right: 20px;
+}
+
+.review-lightbox__nav--prev {
+  left: 16px;
+}
+
+.review-lightbox__nav--next {
+  right: 16px;
+}
+
+body.review-lightbox-open {
+  overflow: hidden;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.carousel-button {
+  border-radius: 999px;
+  border: 1px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-accent);
+  padding: 10px 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+  background: var(--color-accent);
+  color: #ffffff;
 }
 
 .lightbox {
@@ -822,6 +1034,27 @@ main {
   opacity: 0.75;
 }
 
+.villa-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.villa-card .villa-tile {
+  aspect-ratio: 4 / 3;
+  min-height: 260px;
+}
+
+.villa-card__actions {
+  display: flex;
+  justify-content: center;
+}
+
+.villa-card__actions .button {
+  width: 100%;
+  max-width: 260px;
+}
+
 .card h3 {
   font-family: var(--font-serif);
   margin-top: 0;
@@ -961,6 +1194,17 @@ textarea {
   letter-spacing: 0.08em;
 }
 
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.section-center .button-group {
+  justify-content: center;
+}
+
 .button.is-disabled {
   opacity: 0.55;
   cursor: not-allowed;
@@ -1003,6 +1247,13 @@ textarea {
   justify-self: end;
 }
 
+.footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
 @media (max-width: 720px) {
   .footer-inner {
     display: flex;
@@ -1014,6 +1265,10 @@ textarea {
 
   .footer-inner > * {
     justify-self: center;
+  }
+
+  .footer-actions {
+    justify-content: center;
   }
 
   .footer-logo img {
@@ -1179,6 +1434,10 @@ textarea {
   }
 
   .calendar-placeholder {
+    padding: 48px 6vw 70px;
+  }
+
+  .reviews-carousel {
     padding: 48px 6vw 70px;
   }
 
